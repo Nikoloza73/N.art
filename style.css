@@ -354,6 +354,41 @@ h1,h2,h3,h4,h5 { font-family: var(--font-display); font-weight: 400; line-height
 .toast { position:fixed; bottom:32px; right:32px; background:var(--dark); color:var(--white); padding:16px 24px; border-radius:var(--radius-lg); border-left:3px solid var(--gold); font-size:14px; opacity:0; transform:translateY(16px); transition:all 0.3s; z-index:9000; pointer-events:none; }
 .toast.show { opacity:1; transform:translateY(0); }
 
+/* ===== LANGUAGE SWITCHER ===== */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: rgba(26,17,8,0.07);
+  border-radius: 20px;
+  padding: 3px;
+  margin-left: 8px;
+}
+.lang-btn {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border: none;
+  background: transparent;
+  color: var(--text-light);
+  border-radius: 16px;
+  cursor: pointer;
+  transition: var(--transition);
+  line-height: 1;
+}
+.lang-btn.active {
+  background: var(--gold);
+  color: var(--white);
+  box-shadow: 0 2px 8px var(--shadow-gold);
+}
+.lang-btn:not(.active):hover {
+  color: var(--dark);
+  background: rgba(201,168,76,0.15);
+}
+
 /* ===== SCROLL REVEAL ===== */
 .reveal { opacity:0; transform:translateY(30px); transition:opacity 0.7s ease, transform 0.7s ease; }
 .reveal.visible { opacity:1; transform:translateY(0); }

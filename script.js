@@ -1,5 +1,5 @@
 /* ============================================
-   NI Art Studio — Main Script
+   N.art — Main Script (with EN / KA switcher)
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -51,14 +51,13 @@ document.addEventListener('DOMContentLoaded', () => {
     reveals.forEach(el => observer.observe(el));
   }
 
-  // ===== LIGHTBOX (gallery) =====
+  // ===== LIGHTBOX =====
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightboxImg');
   if (lightbox && lightboxImg) {
     document.querySelectorAll('[data-lightbox]').forEach(item => {
       item.addEventListener('click', () => {
-        const src = item.querySelector('img').src;
-        lightboxImg.src = src;
+        lightboxImg.src = item.querySelector('img').src;
         lightbox.classList.add('open');
         document.body.style.overflow = 'hidden';
       });
@@ -67,12 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
     lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
   }
-
   function closeLightbox() {
-    if (lightbox) {
-      lightbox.classList.remove('open');
-      document.body.style.overflow = '';
-    }
+    if (lightbox) { lightbox.classList.remove('open'); document.body.style.overflow = ''; }
   }
 
   // ===== GALLERY FILTER =====
@@ -85,11 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.classList.add('active');
         const cat = btn.dataset.filter;
         galleryItems.forEach(item => {
-          if (cat === 'all' || item.dataset.category === cat) {
-            item.style.display = '';
-          } else {
-            item.style.display = 'none';
-          }
+          item.style.display = (cat === 'all' || item.dataset.category === cat) ? '' : 'none';
         });
       });
     });
@@ -100,7 +91,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (form) {
     form.addEventListener('submit', e => {
       e.preventDefault();
-      showToast('✨ Thank you! We\'ll be in touch soon.');
+      const lang = localStorage.getItem('nart_lang') || 'en';
+      showToast(lang === 'ka'
+        ? '✨ გმადლობთ! მალე დაგიკავშირდებით.'
+        : '✨ Thank you! We\'ll be in touch soon.');
       form.reset();
     });
   }
@@ -122,11 +116,66 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
       const target = document.querySelector(a.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
     });
   });
+
+  // ============================================
+  //   LANGUAGE SWITCHER  (EN / KA)
+  // ============================================
+
+  const LANG_KEY = 'nart_lang';
+  const savedLang = localStorage.getItem(LANG_KEY) || 'en';
+  applyLanguage(savedLang);
+
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.dataset.lang;
+      localStorage.setItem(LANG_KEY, lang);
+      applyLanguage(lang);
+    });
+  });
+
+  function applyLanguage(lang) {
+    document.querySelectorAll('[data-en]').forEach(el => {
+      const val = lang === 'ka' ? el.getAttribute('data-ka') : el.getAttribute('data-en');
+      if (val === null) return;
+      if (el.getAttribute('data-html') === 'true') {
+        el.innerHTML = val;
+      } else {
+        el.textContent = val;
+      }
+    });
+
+    // placeholders
+    document.querySelectorAll('[data-placeholder-en]').forEach(el => {
+      el.placeholder = lang === 'ka'
+        ? (el.getAttribute('data-placeholder-ka') || '')
+        : (el.getAttribute('data-placeholder-en') || '');
+    });
+
+    // select options
+    document.querySelectorAll('select[data-options-en]').forEach(sel => {
+      const opts = lang === 'ka'
+        ? JSON.parse(sel.getAttribute('data-options-ka'))
+        : JSON.parse(sel.getAttribute('data-options-en'));
+      const current = sel.value;
+      sel.innerHTML = '';
+      opts.forEach((opt, i) => {
+        const o = document.createElement('option');
+        o.value = i === 0 ? '' : opt;
+        o.textContent = opt;
+        sel.appendChild(o);
+      });
+      sel.value = current;
+    });
+
+    // switcher button states
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+
+    document.documentElement.lang = lang === 'ka' ? 'ka' : 'en';
+  }
 
 });

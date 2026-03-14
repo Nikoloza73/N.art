@@ -1,63 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gallery — N.art Handmade Jewelry</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — N.art</title>
+  <link rel="stylesheet" href="style.css" /><link rel="preconnect" href="https://fonts.googleapis.com" />
 </head>
 <body>
-
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
       <a class="nav-logo" href="index.html"><img src="logo.jpg" alt="N.art" /></a>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Collections</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="about.html#contact">Contact</a></li>
-        <li><a href="tel:+995599809730" class="btn btn-primary nav-book">Order Now</a></li>
+        <li><a href="index.html" data-en="Home" data-ka="მთავარი">Home</a></li>
+        <li><a href="services.html" data-en="Collections" data-ka="კოლექციები">Collections</a></li>
+        <li><a href="gallery.html" data-en="Gallery" data-ka="გალერეა">Gallery</a></li>
+        <li><a href="about.html" data-en="About" data-ka="ჩვენს შესახებ">About</a></li>
+        <li><a href="about.html#contact" data-en="Contact" data-ka="კონტაქტი">Contact</a></li>
+        <li><a href="tel:+995599809730" class="btn btn-primary nav-book" data-en="Order Now" data-ka="შეკვეთა">Order Now</a></li>
       </ul>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="ka">KA</button>
+      </div>
       <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
     </div>
   </nav>
   <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Home</a>
-    <a href="services.html">Collections</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="about.html">About</a>
-    <a href="about.html#contact">Contact</a>
-    <a href="tel:+995599809730" class="btn btn-primary" style="text-align:center;">Order Now</a>
+    <a href="index.html" data-en="Home" data-ka="მთავარი">Home</a>
+    <a href="services.html" data-en="Collections" data-ka="კოლექციები">Collections</a>
+    <a href="gallery.html" data-en="Gallery" data-ka="გალერეა">Gallery</a>
+    <a href="about.html" data-en="About" data-ka="ჩვენს შესახებ">About</a>
+    <a href="about.html#contact" data-en="Contact" data-ka="კონტაქტი">Contact</a>
+    <a href="tel:+995599809730" class="btn btn-primary" style="text-align:center;" data-en="Order Now" data-ka="შეკვეთა">Order Now</a>
   </div>
 
   <div class="page-hero">
     <div class="container">
-      <span class="section-label">Our Work</span>
-      <h1>The <em>Gallery</em></h1>
-      <p>Browse pieces we've crafted. Every item shown is available to order — prices include full handmade production.</p>
+      <span class="section-label" data-en="Our Work" data-ka="ჩვენი ნამუშევრები">Our Work</span>
+      <h1><em data-en="Gallery" data-ka="გალერეა">Gallery</em></h1>
+      <p data-en="Browse pieces we've crafted. Every item shown is available to order — prices include full handmade production." data-ka="დაათვალიერე ჩვენ მიერ შექმნილი სამკაულები. ყველა ნიმუში შეიძლება შეიკვეთოს — ფასი მოიცავს სრულ ხელნაკეთ წარმოებას.">Browse pieces we've crafted. Every item shown is available to order.</p>
     </div>
   </div>
 
   <section style="padding:60px 0 100px; background:var(--white);">
     <div class="container">
-
       <div class="gallery-filter reveal">
-        <button class="filter-btn active" data-filter="all">All Pieces</button>
-        <button class="filter-btn" data-filter="rings">Rings</button>
-        <button class="filter-btn" data-filter="necklaces">Necklaces</button>
-        <button class="filter-btn" data-filter="earrings">Earrings</button>
-        <button class="filter-btn" data-filter="bracelets">Bracelets</button>
+        <button class="filter-btn active" data-filter="all"       data-en="All Pieces"  data-ka="ყველა">All Pieces</button>
+        <button class="filter-btn" data-filter="rings"            data-en="Rings"       data-ka="ბეჭდები">Rings</button>
+        <button class="filter-btn" data-filter="necklaces"        data-en="Necklaces"   data-ka="ყელსაბამები">Necklaces</button>
+        <button class="filter-btn" data-filter="earrings"         data-en="Earrings"    data-ka="საყურეები">Earrings</button>
+        <button class="filter-btn" data-filter="bracelets"        data-en="Bracelets"   data-ka="სამაჯურები">Bracelets</button>
       </div>
-
       <div class="gallery-full-grid reveal">
 
         <div class="gallery-full-item" data-category="rings" data-lightbox>
           <img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=600&q=80" alt="Gold band ring" loading="lazy" />
           <span class="price-badge-always">₾180</span>
           <div class="gallery-full-overlay">
-            <p class="gallery-item-name">Hammered Gold Band</p>
+            <p class="gallery-item-name" data-en="Hammered Gold Band" data-ka="ჩაქუჩიანი ოქროს სალტე">Hammered Gold Band</p>
             <span class="gallery-item-price-tag">₾180</span>
           </div>
         </div>
@@ -66,7 +65,7 @@
           <img src="https://images.unsplash.com/photo-1635767798638-3e25273a8236?w=600&q=80" alt="Gold pendant necklace" loading="lazy" />
           <span class="price-badge-always">₾160</span>
           <div class="gallery-full-overlay">
-            <p class="gallery-item-name">Geometric Pendant</p>
+            <p class="gallery-item-name" data-en="Geometric Pendant" data-ka="გეომეტრიული საკიდი">Geometric Pendant</p>
             <span class="gallery-item-price-tag">₾160</span>
           </div>
         </div>
@@ -75,7 +74,7 @@
           <img src="https://images.unsplash.com/photo-1619119069152-a2b331eb392a?w=600&q=80" alt="Gold hoop earrings" loading="lazy" />
           <span class="price-badge-always">₾110</span>
           <div class="gallery-full-overlay">
-            <p class="gallery-item-name">Classic Hoop Earrings</p>
+            <p class="gallery-item-name" data-en="Classic Hoop Earrings" data-ka="კლასიკური რგოლ-საყურეები">Classic Hoop Earrings</p>
             <span class="gallery-item-price-tag">₾110</span>
           </div>
         </div>
@@ -84,7 +83,7 @@
           <img src="https://images.unsplash.com/photo-1573408301185-9519f94816b5?w=600&q=80" alt="Gemstone ring" loading="lazy" />
           <span class="price-badge-always">₾320</span>
           <div class="gallery-full-overlay">
-            <p class="gallery-item-name">Sapphire Gemstone Ring</p>
+            <p class="gallery-item-name" data-en="Sapphire Gemstone Ring" data-ka="საფირონის ბეჭედი">Sapphire Gemstone Ring</p>
             <span class="gallery-item-price-tag">₾320</span>
           </div>
         </div>
@@ -93,7 +92,7 @@
           <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600&q=80" alt="Layering necklaces" loading="lazy" />
           <span class="price-badge-always">₾260</span>
           <div class="gallery-full-overlay">
-            <p class="gallery-item-name">Layering Set (2 chains)</p>
+            <p class="gallery-item-name" data-en="Layering Set (2 chains)" data-ka="შეფენილი სეტი (2 ჯაჭვი)">Layering Set (2 chains)</p>
             <span class="gallery-item-price-tag">₾260</span>
           </div>
         </div>
@@ -102,7 +101,7 @@
           <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=600&q=80" alt="Gold cuff bracelet" loading="lazy" />
           <span class="price-badge-always">₾180</span>
           <div class="gallery-full-overlay">
-            <p class="gallery-item-name">Open Gold Cuff</p>
+            <p class="gallery-item-name" data-en="Open Gold Cuff" data-ka="ღია ოქროს სახვია">Open Gold Cuff</p>
             <span class="gallery-item-price-tag">₾180</span>
           </div>
         </div>
@@ -111,16 +110,16 @@
           <img src="https://images.unsplash.com/photo-1630019852942-f89202989a59?w=600&q=80" alt="Drop earrings" loading="lazy" />
           <span class="price-badge-always">₾140</span>
           <div class="gallery-full-overlay">
-            <p class="gallery-item-name">Hammered Drop Earrings</p>
+            <p class="gallery-item-name" data-en="Hammered Drop Earrings" data-ka="ჩაქუჩიანი ჩამოკიდებული საყურეები">Hammered Drop Earrings</p>
             <span class="gallery-item-price-tag">₾140</span>
           </div>
         </div>
 
         <div class="gallery-full-item" data-category="rings" data-lightbox>
-          <img src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?w=600&q=80" alt="Twisted gold ring" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?w=600&q=80" alt="Twisted ring" loading="lazy" />
           <span class="price-badge-always">₾195</span>
           <div class="gallery-full-overlay">
-            <p class="gallery-item-name">Twisted Wire Ring</p>
+            <p class="gallery-item-name" data-en="Twisted Wire Ring" data-ka="გადახლართული მავთულის ბეჭედი">Twisted Wire Ring</p>
             <span class="gallery-item-price-tag">₾195</span>
           </div>
         </div>
@@ -129,7 +128,7 @@
           <img src="https://images.unsplash.com/photo-1608042314453-ae338d682c93?w=600&q=80" alt="Initial necklace" loading="lazy" />
           <span class="price-badge-always">₾150</span>
           <div class="gallery-full-overlay">
-            <p class="gallery-item-name">Initial Letter Necklace</p>
+            <p class="gallery-item-name" data-en="Initial Letter Necklace" data-ka="ინიციალის ყელსაბამი">Initial Letter Necklace</p>
             <span class="gallery-item-price-tag">₾150</span>
           </div>
         </div>
@@ -138,7 +137,7 @@
           <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=600&q=80" alt="Charm bracelet" loading="lazy" />
           <span class="price-badge-always">₾210</span>
           <div class="gallery-full-overlay">
-            <p class="gallery-item-name">Gold Charm Bracelet</p>
+            <p class="gallery-item-name" data-en="Gold Charm Bracelet" data-ka="ოქროს ჩარმ-სამაჯური">Gold Charm Bracelet</p>
             <span class="gallery-item-price-tag">₾210</span>
           </div>
         </div>
@@ -147,7 +146,7 @@
           <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=600&h=800&q=80" alt="Stud earrings" loading="lazy" />
           <span class="price-badge-always">₾95</span>
           <div class="gallery-full-overlay">
-            <p class="gallery-item-name">Round Gold Studs</p>
+            <p class="gallery-item-name" data-en="Round Gold Studs" data-ka="მრგვალი ოქროს ყუნწები">Round Gold Studs</p>
             <span class="gallery-item-price-tag">₾95</span>
           </div>
         </div>
@@ -156,7 +155,7 @@
           <img src="https://images.unsplash.com/photo-1573408301185-9519f94816b5?w=600&h=800&q=80" alt="Stacking rings" loading="lazy" />
           <span class="price-badge-always">₾380</span>
           <div class="gallery-full-overlay">
-            <p class="gallery-item-name">Stacking Ring Set ×3</p>
+            <p class="gallery-item-name" data-en="Stacking Ring Set ×3" data-ka="დასაწყობებელი სეტი ×3">Stacking Ring Set ×3</p>
             <span class="gallery-item-price-tag">₾380</span>
           </div>
         </div>
@@ -166,63 +165,25 @@
   </section>
 
   <section class="cta-section">
-    <div class="container">
-      <div class="reveal">
-        <h2>See something you love?<br><em>Order yours today.</em></h2>
-        <p>Every piece is made fresh by hand — share the photo when you call and we'll recreate it for you.</p>
-        <div class="cta-actions">
-          <a href="tel:+995599809730" class="btn btn-primary">📞 599 80 97 30</a>
-          <a href="https://www.instagram.com/n.art_handmade" target="_blank" class="btn btn-outline">📸 More on Instagram</a>
-        </div>
+    <div class="container"><div class="reveal">
+      <h2 data-html="true" data-en="See something you love?<br><em>Order yours today.</em>" data-ka="რამე მოეწონა?<br><em>შეუკვეთე დღეს.</em>">See something you love?<br><em>Order yours today.</em></h2>
+      <p data-en="Every piece is made fresh by hand — share the photo when you call and we'll recreate it for you." data-ka="თითოეული ნაჭერი ხელნაკეთია — გაგვიგზავნე ფოტო დარეკვისას და ჩვენ გადავქმნით.">Every piece is made fresh by hand — share the photo when you call and we'll recreate it for you.</p>
+      <div class="cta-actions">
+        <a href="tel:+995599809730" class="btn btn-primary" data-en="📞 599 80 97 30" data-ka="📞 599 80 97 30">📞 599 80 97 30</a>
+        <a href="https://www.instagram.com/n.art_handmade" target="_blank" class="btn btn-outline" data-en="📸 More on Instagram" data-ka="📸 ინსტაგრამი">📸 More on Instagram</a>
       </div>
-    </div>
+    </div></div>
   </section>
 
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-brand">
-          <img src="logo.jpg" alt="N.art" />
-          <p>Handmade gold jewelry crafted with passion in Kutaisi, Georgia. Every piece is unique — just like you.</p>
-          <div class="footer-social">
-            <a class="social-link" href="https://www.instagram.com/n.art_handmade" target="_blank">📸</a>
-            <a class="social-link" href="tel:+995599809730">📞</a>
-            <a class="social-link" href="https://wa.me/995599809730" target="_blank">💬</a>
-          </div>
-        </div>
-        <div>
-          <h4>Pages</h4>
-          <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Collections</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="about.html#contact">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Collections</h4>
-          <ul class="footer-links">
-            <li><a href="services.html">Rings</a></li>
-            <li><a href="services.html">Necklaces</a></li>
-            <li><a href="services.html">Earrings</a></li>
-            <li><a href="services.html">Bracelets</a></li>
-            <li><a href="services.html#masterclasses">Masterclasses</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Contact</h4>
-          <div class="footer-contact">
-            <div class="footer-contact-item"><span class="icon">📞</span><span>599 80 97 30</span></div>
-            <div class="footer-contact-item"><span class="icon">📸</span><span>@n.art_handmade</span></div>
-            <div class="footer-contact-item"><span class="icon">📍</span><span>აღმაშენებლის 129, Kutaisi</span></div>
-          </div>
-        </div>
+        <div class="footer-brand"><img src="logo.jpg" alt="N.art" /><p data-en="Handmade gold jewelry crafted with passion in Kutaisi, Georgia. Every piece is unique — just like you." data-ka="ხელნაკეთი ოქროს სამკაულები ქუთაისში. თითოეული ნაჭერი უნიკალურია.">Handmade gold jewelry crafted with passion in Kutaisi.</p><div class="footer-social"><a class="social-link" href="https://www.instagram.com/n.art_handmade" target="_blank">📸</a><a class="social-link" href="tel:+995599809730">📞</a><a class="social-link" href="https://wa.me/995599809730" target="_blank">💬</a></div></div>
+        <div><h4 data-en="Pages" data-ka="გვერდები">Pages</h4><ul class="footer-links"><li><a href="index.html" data-en="Home" data-ka="მთავარი">Home</a></li><li><a href="services.html" data-en="Collections" data-ka="კოლექციები">Collections</a></li><li><a href="gallery.html" data-en="Gallery" data-ka="გალერეა">Gallery</a></li><li><a href="about.html" data-en="About" data-ka="ჩვენს შესახებ">About</a></li><li><a href="about.html#contact" data-en="Contact" data-ka="კონტაქტი">Contact</a></li></ul></div>
+        <div><h4 data-en="Collections" data-ka="კოლექციები">Collections</h4><ul class="footer-links"><li><a href="services.html" data-en="Rings" data-ka="ბეჭდები">Rings</a></li><li><a href="services.html" data-en="Necklaces" data-ka="ყელსაბამები">Necklaces</a></li><li><a href="services.html" data-en="Earrings" data-ka="საყურეები">Earrings</a></li><li><a href="services.html" data-en="Bracelets" data-ka="სამაჯურები">Bracelets</a></li><li><a href="services.html#masterclasses" data-en="Masterclasses" data-ka="მასტერკლასები">Masterclasses</a></li></ul></div>
+        <div><h4 data-en="Contact" data-ka="კონტაქტი">Contact</h4><div class="footer-contact"><div class="footer-contact-item"><span class="icon">📞</span><span>599 80 97 30</span></div><div class="footer-contact-item"><span class="icon">📸</span><span>@n.art_handmade</span></div><div class="footer-contact-item"><span class="icon">📍</span><span data-en="Aghmashenebeli 129, Kutaisi" data-ka="აღმაშენებლის 129, ქუთაისი">Aghmashenebeli 129, Kutaisi</span></div></div></div>
       </div>
-      <div class="footer-bottom">
-        <span>© 2025 N.art Handmade Jewelry. All rights reserved.</span>
-        <span>Made with ✦ in Kutaisi</span>
-      </div>
+      <div class="footer-bottom"><span data-en="© 2025 N.art Handmade Jewelry. All rights reserved." data-ka="© 2025 N.art ხელნაკეთი სამკაულები. ყველა უფლება დაცულია.">© 2025 N.art Handmade Jewelry. All rights reserved.</span><span data-en="Made with ✦ in Kutaisi" data-ka="შექმნილია ✦ ქუთაისში">Made with ✦ in Kutaisi</span></div>
     </div>
   </footer>
 
@@ -230,7 +191,6 @@
     <span class="lightbox-close" id="lightboxClose">✕</span>
     <img class="lightbox-img" id="lightboxImg" src="" alt="Jewelry detail" />
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
