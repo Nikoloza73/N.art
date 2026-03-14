@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — NI Art Studio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html">
+        <img src="logo.jpg" alt="NI Art Studio Logo" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="about.html#contact">Contact</a></li>
+        <li><a href="tel:+99500000000" class="btn btn-primary nav-book">Book Now</a></li>
+      </ul>
+      <div class="nav-toggle" id="navToggle">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="about.html#contact">Contact</a>
+    <a href="tel:+99500000000" class="btn btn-primary" style="text-align:center;">Book Now</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-label">Our Work</span>
+      <h1>The <em>Gallery</em></h1>
+      <p>Browse our portfolio of nail designs. Each price shown reflects the full service cost.</p>
+    </div>
+  </div>
+
+  <!-- GALLERY -->
+  <section style="padding: 60px 0 100px; background: var(--white);">
+    <div class="container">
+
+      <!-- FILTER -->
+      <div class="gallery-filter reveal">
+        <button class="filter-btn active" data-filter="all">All Work</button>
+        <button class="filter-btn" data-filter="manicure">Manicure</button>
+        <button class="filter-btn" data-filter="extensions">Extensions</button>
+        <button class="filter-btn" data-filter="art">Nail Art</button>
+        <button class="filter-btn" data-filter="pedicure">Pedicure</button>
+      </div>
+
+      <!-- GRID -->
+      <div class="gallery-full-grid reveal">
+
+        <div class="gallery-full-item" data-category="art" data-lightbox>
+          <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80" alt="Floral Nail Art" loading="lazy" />
+          <span class="price-badge-always">₾85</span>
+          <div class="gallery-full-overlay">
+            <p class="gallery-item-name">Floral Gold Art</p>
+            <span class="gallery-item-price-tag">₾85</span>
+          </div>
+        </div>
+
+        <div class="gallery-full-item" data-category="manicure" data-lightbox>
+          <img src="https://images.unsplash.com/photo-1632345031435-8727f592d8db?w=600&q=80" alt="Classic Gel Manicure" loading="lazy" />
+          <span class="price-badge-always">₾35</span>
+          <div class="gallery-full-overlay">
+            <p class="gallery-item-name">Classic Gel Manicure</p>
+            <span class="gallery-item-price-tag">₾35</span>
+          </div>
+        </div>
+
+        <div class="gallery-full-item" data-category="extensions" data-lightbox>
+          <img src="https://images.unsplash.com/photo-1604902396830-aca29e19b067?w=600&q=80" alt="Gel Extensions" loading="lazy" />
+          <span class="price-badge-always">₾70</span>
+          <div class="gallery-full-overlay">
+            <p class="gallery-item-name">Long Gel Extensions</p>
+            <span class="gallery-item-price-tag">₾70</span>
+          </div>
+        </div>
+
+        <div class="gallery-full-item" data-category="art" data-lightbox>
+          <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&h=800&q=80" alt="Abstract Nail Art" loading="lazy" />
+          <span class="price-badge-always">₾95</span>
+          <div class="gallery-full-overlay">
+            <p class="gallery-item-name">Abstract Marble Set</p>
+            <span class="gallery-item-price-tag">₾95</span>
+          </div>
+        </div>
+
+        <div class="gallery-full-item" data-category="manicure" data-lightbox>
+          <img src="https://images.unsplash.com/photo-1632345031435-8727f592d8db?w=600&h=800&q=80" alt="French Manicure" loading="lazy" />
+          <span class="price-badge-always">₾40</span>
+          <div class="gallery-full-overlay">
+            <p class="gallery-item-name">French Manicure</p>
+            <span class="gallery-item-price-tag">₾40</span>
+          </div>
+        </div>
+
+        <div class="gallery-full-item" data-category="art" data-lightbox>
+          <img src="https://images.unsplash.com/photo-1604902396830-aca29e19b067?w=600&h=800&q=80" alt="Chrome Nails" loading="lazy" />
+          <span class="price-badge-always">₾55</span>
+          <div class="gallery-full-overlay">
+            <p class="gallery-item-name">Chrome Mirror Nails</p>
+            <span class="gallery-item-price-tag">₾55</span>
+          </div>
+        </div>
+
+        <div class="gallery-full-item" data-category="extensions" data-lightbox>
+          <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&h=750&q=80" alt="Almond Extensions" loading="lazy" />
+          <span class="price-badge-always">₾75</span>
+          <div class="gallery-full-overlay">
+            <p class="gallery-item-name">Almond Gel Extensions</p>
+            <span class="gallery-item-price-tag">₾75</span>
+          </div>
+        </div>
+
+        <div class="gallery-full-item" data-category="pedicure" data-lightbox>
+          <img src="https://images.unsplash.com/photo-1632345031435-8727f592d8db?w=600&h=750&q=80" alt="Pedicure" loading="lazy" />
+          <span class="price-badge-always">₾50</span>
+          <div class="gallery-full-overlay">
+            <p class="gallery-item-name">Gel Pedicure</p>
+            <span class="gallery-item-price-tag">₾50</span>
+          </div>
+        </div>
+
+        <div class="gallery-full-item" data-category="art" data-lightbox>
+          <img src="https://images.unsplash.com/photo-1604902396830-aca29e19b067?w=600&h=750&q=80" alt="Ombre Nails" loading="lazy" />
+          <span class="price-badge-always">₾50</span>
+          <div class="gallery-full-overlay">
+            <p class="gallery-item-name">Baby Boomer Ombre</p>
+            <span class="gallery-item-price-tag">₾50</span>
+          </div>
+        </div>
+
+        <div class="gallery-full-item" data-category="manicure" data-lightbox>
+          <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&h=720&q=80" alt="Biogel Manicure" loading="lazy" />
+          <span class="price-badge-always">₾45</span>
+          <div class="gallery-full-overlay">
+            <p class="gallery-item-name">Biogel Manicure</p>
+            <span class="gallery-item-price-tag">₾45</span>
+          </div>
+        </div>
+
+        <div class="gallery-full-item" data-category="art" data-lightbox>
+          <img src="https://images.unsplash.com/photo-1632345031435-8727f592d8db?w=600&h=720&q=80" alt="Floral 3D Art" loading="lazy" />
+          <span class="price-badge-always">₾110</span>
+          <div class="gallery-full-overlay">
+            <p class="gallery-item-name">3D Floral Design</p>
+            <span class="gallery-item-price-tag">₾110</span>
+          </div>
+        </div>
+
+        <div class="gallery-full-item" data-category="extensions" data-lightbox>
+          <img src="https://images.unsplash.com/photo-1604902396830-aca29e19b067?w=600&h=720&q=80" alt="Stiletto Extensions" loading="lazy" />
+          <span class="price-badge-always">₾80</span>
+          <div class="gallery-full-overlay">
+            <p class="gallery-item-name">Stiletto Extensions</p>
+            <span class="gallery-item-price-tag">₾80</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="reveal">
+        <h2>Love what you see?<br><em>Book your look.</em></h2>
+        <p>Share a photo from our gallery when you book and we'll recreate it for you.</p>
+        <div class="cta-actions">
+          <a href="tel:+99500000000" class="btn btn-primary">📞 Book Now</a>
+          <a href="https://instagram.com/" target="_blank" class="btn btn-outline">📸 See More on Instagram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="logo.jpg" alt="NI Art Studio" />
+          <p>A premium nail studio in Tbilisi dedicated to beautiful, long-lasting nail art. Hygiene and artistry above all.</p>
+          <div class="footer-social">
+            <a class="social-link" href="https://instagram.com/" target="_blank">📸</a>
+            <a class="social-link" href="tel:+99500000000">📞</a>
+            <a class="social-link" href="https://wa.me/99500000000" target="_blank">💬</a>
+          </div>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Classic Manicure</a></li>
+            <li><a href="services.html">Gel Extensions</a></li>
+            <li><a href="services.html">Nail Art</a></li>
+            <li><a href="services.html">Pedicure</a></li>
+            <li><a href="services.html#masterclasses">Masterclasses</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <div class="footer-contact">
+            <div class="footer-contact-item"><span class="icon">📞</span><span>+995 000 000 000</span></div>
+            <div class="footer-contact-item"><span class="icon">📸</span><span>@ni_art_studio</span></div>
+            <div class="footer-contact-item"><span class="icon">📍</span><span>Tbilisi, Georgia</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 NI Art Studio. All rights reserved.</span>
+        <span>Made with ✦ in Tbilisi</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose">✕</span>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="Enlarged nail art" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
